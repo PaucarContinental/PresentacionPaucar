@@ -29,11 +29,10 @@
             gap: 20px;
         }
 
-        .profile-card, .omen-container {
+        .profile-card, .omen-container, .description-container {
             background: rgba(0, 0, 0, 0.9);
             border: 3px solid #1fe0e0;
             border-radius: 15px;
-            width: 50%;
             padding: 20px;
             text-align: center;
             box-shadow: 0 0 25px #1fe0e0;
@@ -42,6 +41,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+        }
+
+        .profile-card {
+            width: calc(50% + 1150px); /* Incrementa el ancho en 3 cm (aprox 30px) */
         }
 
             .profile-card img {
@@ -67,7 +70,7 @@
             text-shadow: 0 0 5px #1fe0e0;
         }
 
-        .profile-card p {
+        .profile-card p, .description-container p {
             font-size: 1em;
             color: #1fe0e0;
             margin-bottom: 10px;
@@ -80,32 +83,53 @@
             color: #1fe0e0;
         }
 
-        .main-title {
+        .main-title, .description-title {
             color: #1fe0e0;
             font-weight: bold;
             font-size: 1.3em;
             margin-top: 15px;
         }
+
+        .layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .right-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile-card">
-            <img src="integrante05.jpg" alt="Rye Gabriel Gregory Paucar Quejia" class="omen-image">
-            <h2>Rye Gabriel Gregory</h2>
-            <p class="full-name">Paucar Quejia</p>
-            <div class="description">
-                <p>Edad: 20 años</p>
-                <p>Carrera: Ingeniería de Sistemas e Informática</p>
-                <p>Semestre actual: 7mo</p>
-                <p>Pasatiempos: Jugar videojuegos, escuchar música electrónica, caminar, mirar series y películas.</p>
-                <p>"Soy un estudiante apasionado de la tecnología y el desarrollo de sistemas, con una gran afición por los videojuegos y la música electrónica. Disfruto explorar nuevas ideas, relajarme viendo series y mantenerme activo con caminatas recreativas."</p>
+    <div class="layout">
+        <div class="container">
+            <div class="profile-card">
+                <img src="integrante05.jpg" alt="Rye Gabriel Gregory Paucar Quejia" class="omen-image">
+                <h2>Rye Gabriel Gregory</h2>
+                <p class="full-name">Paucar Quejia</p>
+                <div class="description">
+                    <p>Edad: 20 años</p>
+                    <p>Carrera: Ingeniería de Sistemas e Informática</p>
+                    <p>Semestre actual: 7mo</p>
+                    <p>Pasatiempos: Jugar videojuegos, escuchar música electrónica, caminar, mirar series y películas.</p>
+                </div>
             </div>
-        </div>
-        <div class="omen-container">
-            <div class="main-title">Main en Valorant:</div>
-            <img src="omen.jpg" alt="Omen" class="omen-image">
-            <p>Omen</p>
+            <div class="right-container">
+                <div class="description-container">
+                    <div class="description-title">DESCRIPCIÓN</div>
+                    <p>"Soy un estudiante apasionado de la tecnología y el desarrollo de sistemas, con una gran afición por los videojuegos y la música electrónica. Disfruto explorar nuevas ideas, relajarme viendo series y mantenerme activo con caminatas recreativas."</p>
+                </div>
+                <div class="omen-container">
+                    <div class="main-title">Main en Valorant:</div>
+                    <img src="omen.jpg" alt="Omen" class="omen-image">
+                    <p>Omen</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
